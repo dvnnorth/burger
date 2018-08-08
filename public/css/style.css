@@ -1,0 +1,7 @@
+body {
+    background: url("../img/vintage-concrete.png");
+}
+
+.jumbotron, .container {
+    background: #fff;
+}
