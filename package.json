@@ -1,0 +1,34 @@
+{
+  "name": "burger-app",
+  "version": "1.0.0",
+  "description": "A full-stack web application to demonstrate knowledge of server-side code and templating using Node, Express, and Handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvnnorth/burger-app.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql",
+    "handlebars",
+    "bootstrap"
+  ],
+  "author": "Devin North",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvnnorth/burger-app/issues"
+  },
+  "homepage": "https://github.com/dvnnorth/burger-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.3.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}

@@ -21,7 +21,7 @@ express-handlebars
 body-parser
 mysql
 ```
-Afterwards, be sure to set up your `.env` file to include the information for your database.
+Afterwards, be sure to set up your `.env` file to include the information for your database. Also, run the included `schema.sql` and `seeds.sql` to create and populate your database.
 
 
 ## Built With
