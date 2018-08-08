@@ -3,4 +3,8 @@ const burgers = require("../models/burgers.js");
 
 const router = express.Router();
 
-module.export = router;
+router.get("/", (req, res) => {
+    res.render("index");
+});
+
+module.exports = router;

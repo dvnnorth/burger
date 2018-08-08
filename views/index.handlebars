@@ -1,8 +1,12 @@
 <div class="col-md-4 offset-md-2">
     <h2 class="text-center">Orders Up</h2>
-    {{ ordersUp }}
+    {{#each burger }}
+        <li>{{this}} {{>button}}</li>
+    {{/each}}
 </div>
 <div class="col-md-4">
     <h2 class="text-center">Finished</h2>
-    {{ devoured }}
+    {{#each devoured}}
+        <li>{{this}}</li>
+    {{/each}}
 </div>
