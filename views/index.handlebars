@@ -1,16 +1,16 @@
 <div class="col-md-4 offset-md-2">
     <h2 class="text-center">Orders Up</h2>
-    <ul class="list-group">
+    <ul class="list-group list-group-flush">
     {{#each burgers}}
-        <li class="m-1">{{this.burger_name}} {{>button id=this.id}}</li>
+        <li class="list-group-item mx-auto mx-md-2">{{this.burger_name}} {{>button id=this.id}}</li>
     {{/each}}
     </ul>
 </div>
 <div class="col-md-4">
     <h2 class="text-center">Finished</h2>
-    <ul class="list-group">
+    <ul class="list-group list-group-flush">
     {{#each devoured}}
-        <li class="m-1">{{this.burger_name}}</li>
+        <li class="list-group-item mx-auto mx-md-2 bg-light text-secondary">{{this.burger_name}}</li>
     {{/each}}
     </ul>
 </div>

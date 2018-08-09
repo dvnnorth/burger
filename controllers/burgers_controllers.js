@@ -11,6 +11,12 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/api/burgers", (req, res) => {
+    burgers.getAllBurgers((data) => {
+        res.json(data);
+    });
+});
+
 router.post("/api/burgers", (req, res) => {
     burgers.addBurger(req.body.burgerName, (result) => res.json({ id: result.insertId }));
 });

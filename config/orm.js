@@ -6,7 +6,6 @@ const connection = require("./connection");
 let selectAll = (tableName, callback) => {
   connection.query("SELECT * FROM ??", [tableName], (err, data) => {
     if (err) throw err;
-    console.log(data);
     callback(data);
   });
 };
