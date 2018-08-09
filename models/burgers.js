@@ -4,16 +4,16 @@ let getAllBurgers = (callback) => {
   orm.selectAll("burgers", callback);
 };
 
-let addBurger = (burgerName) => {
+let addBurger = (burgerName, callback) => {
   let burger = {
     burger_name: burgerName,
     devoured: false
   };
-  orm.insertOne("burgers", burger);
+  orm.insertOne("burgers", burger, /*(results) => callback(results)*/callback);
 };
 
-let devour = (burgerName) => {
-  orm.updateOne("devoured", true, "burger_name", burgerName);
+let devour = (id, callback) => {
+  orm.updateOne("burgers", "devoured", true, "id", id, callback);
 };
 
 let methods = {
