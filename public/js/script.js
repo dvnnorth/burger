@@ -11,16 +11,32 @@ $(() => {
     });
     $("#orderSubmit").on("click", (event) => {
         event.preventDefault();
+
         let data = {
             burgerName: $("#burgerOrderForm").val().trim()
         }
-        $.ajax({
-            type: "POST",
-            url: "/api/burgers",
-            data: data
-        })
-            .then(() => {
-                location.reload();
-            });
+
+        if (data.burgerName) {
+            $("#badInput").remove();
+            $.ajax({
+                type: "POST",
+                url: "/api/burgers",
+                data: data
+            })
+                .then(() => {
+                    location.reload();
+                });
+        }
+        else {
+            console.log($("#badInput").length);
+            if (!$("#badInput").length) {
+                $("#burgerOrder")
+                    .append(
+                        $("<p>")
+                            .attr("class", "text-danger")
+                            .attr("id", "badInput")
+                            .text("Invalid input"));
+            }
+        }
     });
 });
